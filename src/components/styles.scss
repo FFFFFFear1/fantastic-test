@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Saira:wght@100;300&display=swap");
+
+/*===================== Common parameters ====================*/
+
+body {
+  font-family: "Saira", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #9ff1ff;
+}
+
+#form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem auto 2rem auto;
+}
+
+.conteiner {
+  width: 30rem;
+  height: auto;
+  color: #000000;
+  background-color: #ffffffbd;
+  border: 1px solid rgb(63, 178, 255);
+  border-radius: 1.5rem;
+  margin: (50vh / 4) auto;
+}
+
+.input_field {
+  display: flex;
+  flex-direction: column;
+  font-size: 22px;
+  margin: auto auto 2rem auto;
+  width: 80%;
+}
+
+.error {
+  border: 2px solid red;
+}
+.errorText {
+  color: red;
+  font-size: 15px;
+  margin: 0;
+}
+
+.button {
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 10rem;
+  height: 3rem;
+  font-size: 25px;
+  border-radius: 2rem;
+}
+
+/*===================== Step one ====================*/
+
+.stepOne {
+  &__title {
+    text-align: center;
+    font-weight: 1200;
+    font-size: 50px;
+  }
+}
+
+/*===================== Step four ====================*/
+
+.stepFour {
+  &__title {
+    text-align: center;
+    font-weight: 1200;
+    font-size: 50px;
+  }
+
+  &__result {
+    width: 80%;
+    font-size: 25px;
+    margin-bottom: 2rem;
+  }
+}
