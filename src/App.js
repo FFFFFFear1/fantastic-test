@@ -74,8 +74,6 @@ function App() {
     }
   }
 
-  // сделать валидную дату
-
   return (
     <Context.Provider
       value={{

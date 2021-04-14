@@ -15,7 +15,7 @@ export default function StepOne() {
 
   const validationFullName = {
     required: { value: true, message: "Required field" },
-    minLength: { value: 3, message: "To short, min 3 chars" },
+    minLength: { value: 3, message: "Short password, at least 3 characters" },
     pattern: {
       value: /^[a-zA-Z\s]+$/i,
       message: "Invalid field",
@@ -40,7 +40,7 @@ export default function StepOne() {
           title={"Name"}
           type={"text"}
           error={errors.name}
-          placeholder={"Enter your name..."}
+          placeholder={"Enter name..."}
           validation={validationFullName}
           register={register}
         />
@@ -50,7 +50,7 @@ export default function StepOne() {
           title={"Surname"}
           type={"text"}
           error={errors.surname}
-          placeholder={"Enter your surname..."}
+          placeholder={"Enter surname..."}
           validation={validationFullName}
           register={register}
         />
@@ -60,7 +60,7 @@ export default function StepOne() {
           title={"Patronymic"}
           type={"text"}
           error={errors.patronymic}
-          placeholder={"Enter your patronymic..."}
+          placeholder={"Enter patronymic..."}
           validation={validationFullName}
           register={register}
         />
@@ -70,69 +70,14 @@ export default function StepOne() {
           title={"Date of Birth"}
           type={"date"}
           error={errors.date}
-          placeholder={"Enter your date of Birth..."}
+          placeholder={"Enter date of Birth..."}
           validation={validationDate}
           register={register}
         />
 
-        {/* <div className={errors.name ? "input_field error" : "input_field"}>
-          <label>
-            Name<strong style={{ color: "red" }}>*</strong>
-          </label>
-          <Input
-            type="text"
-            placeholder="Enter your name..."
-            {...register("name", validationFullName)}
-          />
-          {printError(errors.name)}
-        </div> */}
-
-        {/* <div className={errors.surname ? "input_field error" : "input_field"}>
-          <label>
-            Surname<strong style={{ color: "red" }}>*</strong>
-          </label>
-          <Input
-            type="text"
-            placeholder="Enter your surname..."
-            {...register("surname", validationFullName)}
-          />
-          {printError(errors.surname)}
-        </div> */}
-        {/* <div
-          className={errors.patronymic ? "input_field error" : "input_field"}
-        >
-          <label>
-            Patronymic<strong style={{ color: "red" }}>*</strong>
-          </label>
-          <Input
-            type="text"
-            placeholder="Enter your patronymic..."
-            {...register("patronymic", validationFullName)}
-          />
-          {printError(errors.patronymic)}
-        </div> */}
-        {/* <div className={errors.date ? "input_field error" : "input_field"}>
-          <label>
-            Date of Birth<strong style={{ color: "red" }}>*</strong>
-          </label>
-          <Input
-            type="date"
-            placeholder="Enter your date of Birth..."
-            {...register("date", validationDate)}
-          />
-          {printError(errors.date)}
-        </div> */}
-
-        <div className="tooltip">
-          <Button
-            variant="contained"
-            color="secondary"
-            type="submit"
-            form="form"
-          >
-            Continue
-          </Button>
-        </div>
+        <Button variant="contained" color="secondary" type="submit" form="form">
+          Continue
+        </Button>
       </form>
     </div>
   );

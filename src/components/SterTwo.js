@@ -34,23 +34,11 @@ export default function StepTwo() {
           title={"Email"}
           type={"text"}
           error={errors.email}
-          placeholder={"Enter your email..."}
+          placeholder={"Enter email address..."}
           validation={validationEmail}
           register={register}
         />
 
-        {/* <div className={errors.email ? "input_field error" : "input_field"}>
-          <label>
-            Email<strong style={{ color: "red" }}>*</strong>
-          </label>
-          <Input
-            type="text"
-            placeholder="Enter your email..."
-            {...register("email", validationEmail)}
-          />
-          {printError(errors.email)}
-        </div> */}
-        
         <Button variant="contained" color="secondary" type="submit" form="form">
           Continue
         </Button>

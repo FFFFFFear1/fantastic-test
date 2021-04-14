@@ -26,13 +26,14 @@ export default function StepThree() {
     required: { value: true, message: "Required field" },
     minLength: {
       value: 6,
-      message: "To short password, min 6 chars",
+      message: "Short password, at least 6 characters",
     },
   };
 
   const passwordConfirmation = {
     required: { value: true, message: "Required field" },
-    validate: (value) => value === password.current || "Password mismatch",
+    validate: (value) =>
+      value === password.current || "The passwords do not match",
   };
 
   return (
@@ -43,46 +44,20 @@ export default function StepThree() {
           title={"Password"}
           type={"password"}
           error={errors.password}
-          placeholder={"Enter your password..."}
+          placeholder={"Enter password..."}
           validation={validationPassord}
           register={register}
         />
 
         <InputField
           name={"confirmation"}
-          title={"Password confirmation"}
+          title={"Verification password"}
           type={"password"}
           error={errors.confirmation}
-          placeholder={"Enter your password..."}
+          placeholder={"Re-enter password..."}
           validation={passwordConfirmation}
           register={register}
         />
-
-        {/* <div className={errors.password ? "input_field error" : "input_field"}>
-          <label>
-            Password<strong style={{ color: "red" }}>*</strong>
-          </label>
-          <Input
-            id="password"
-            type="password"
-            placeholder="Enter your password..."
-            {...register("password", validationPassord)}
-          />
-          {printError(errors.password)}
-        </div> */}
-        {/* <div
-          className={errors.confirmation ? "input_field error" : "input_field"}
-        >
-          <label>
-            Password confirmation<strong style={{ color: "red" }}>*</strong>
-          </label>
-          <Input
-            type="password"
-            placeholder="Repeat your password..."
-            {...register("confirmation", passwordConfirmation)}
-          />
-          {printError(errors.confirmation)}
-        </div> */}
 
         <Button variant="contained" color="secondary" type="submit" form="form">
           Continue
